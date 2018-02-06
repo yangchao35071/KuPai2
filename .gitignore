@@ -1,6 +1,6 @@
 /node_modules
 /.vscode
-#package.json
+.package.json
 /after/node_modules
-#after/package.json
-#after/package-lock.json
+.after/package.json
+.after/package-lock.json
