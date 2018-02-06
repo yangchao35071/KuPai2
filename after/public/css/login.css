@@ -1,0 +1,338 @@
+html, body, form, img, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, b, u, i, p, em, td, th, input, textarea, label, select, iframe {
+  font-family: 'Microsoft Yahei',Arial;
+  font-size: 12px;
+  color: #444;
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #f7f8f8;
+  overflow-x: hidden; }
+
+ul,
+li {
+  list-style: none;
+  display: inline-block; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+i,
+s {
+  display: inline-block;
+  vertical-align: middle; }
+
+img {
+  vertical-align: bottom;
+  border: none; }
+
+input {
+  outline: none; }
+
+.all {
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto; }
+  .all .head {
+    width: 100%;
+    height: 44px;
+    background: #000;
+    position: relative; }
+    .all .head .header {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto; }
+      .all .head .header .logo {
+        display: inline-block;
+        position: absolute;
+        left: 150px;
+        top: 12px; }
+        .all .head .header .logo img {
+          width: 108px;
+          height: 22px; }
+      .all .head .header ul {
+        overflow: hidden;
+        float: right; }
+        .all .head .header ul li {
+          float: left;
+          margin-right: 85px; }
+          .all .head .header ul li a {
+            line-height: 44px;
+            font-size: 14px; }
+            .all .head .header ul li a img {
+              vertical-align: middle; }
+          .all .head .header ul li input {
+            width: 200px;
+            height: 30px;
+            border: 0;
+            text-indent: 10px;
+            background: url(../img/search.png) no-repeat 180px center;
+            margin-top: 7px;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-size: 14px; }
+          .all .head .header ul li:last-child {
+            margin: 0; }
+      .all .head .header i {
+        display: none;
+        background: url(../img/search.png) no-repeat center;
+        width: 17px;
+        height: 19px;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        background-size: cover; }
+      .all .head .header b {
+        display: none;
+        background: url(../img/seek.png) no-repeat center;
+        width: 17px;
+        height: 19px;
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        background-size: cover; }
+  .all .login {
+    width: 100%;
+    height: 600px;
+    background: url(../img/67Bkh4kVlJYg.jpg) no-repeat center;
+    position: relative; }
+    .all .login .login_con {
+      width: 310px;
+      height: 360px;
+      border: 1px solid #ccc;
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      margin-top: -200px;
+      background: #fff;
+      padding: 20px; }
+      .all .login .login_con .login_tit {
+        color: #000;
+        font-size: 18px;
+        width: 290px;
+        line-height: 30px;
+        font-weight: 900;
+        padding: 10px; }
+        .all .login .login_con .login_tit .register {
+          float: right; }
+          .all .login .login_con .login_tit .register a {
+            color: green; }
+      .all .login .login_con .hint {
+        width: 100%;
+        line-height: 20px;
+        text-align: center;
+        background: red; }
+      .all .login .login_con form div {
+        width: 100%;
+        height: 40px;
+        margin: 15px 0; }
+        .all .login .login_con form div label {
+          float: left;
+          display: inline-block;
+          width: 39px;
+          height: 36px;
+          border: 1px solid #ccc;
+          border-right: 0;
+          background: url(../img/bg_input.png) no-repeat 1px -120px; }
+        .all .login .login_con form div input {
+          float: left;
+          width: 260px;
+          height: 36px;
+          text-indent: 24px;
+          font-size: 14px;
+          border: 1px solid #ccc; }
+      .all .login .login_con form .userpass label {
+        background: url(../img/bg_input.png) no-repeat 1px -180px; }
+      .all .login .login_con form .verify label {
+        background: url(../img/bg_input.png) no-repeat 1px -180px; }
+      .all .login .login_con form .verify input {
+        width: 200px; }
+      .all .login .login_con form .verify span {
+        display: inline-block;
+        width: 50px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 14px;
+        margin: 3px 0 0 8px; }
+      .all .login .login_con form .autoLogin {
+        line-height: 15px; }
+        .all .login .login_con form .autoLogin input {
+          width: 15px;
+          height: 15px;
+          margin-right: 10px; }
+      .all .login .login_con form .sub {
+        width: 100%;
+        height: 50px; }
+        .all .login .login_con form .sub input {
+          width: 100%;
+          height: 100%;
+          background: blue;
+          text-align: center;
+          font-size: 18px;
+          color: #fff;
+          text-indent: 0; }
+  .all .footer {
+    width: 100%; }
+    .all .footer .footer_con {
+      margin: 0 auto;
+      margin-top: 80px;
+      overflow: hidden;
+      padding-bottom: 90px;
+      width: 1200px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .all .footer .footer_con .footer_left {
+        border-right: 1px solid #e9e9e9;
+        position: relative;
+        width: 900px;
+        float: left;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-right: 15px;
+        padding-left: 30px;
+        overflow: hidden; }
+        .all .footer .footer_con .footer_left dl {
+          float: left;
+          width: 25%; }
+          .all .footer .footer_con .footer_left dl dt {
+            margin-bottom: 15px; }
+            .all .footer .footer_con .footer_left dl dt b {
+              font-size: 16px; }
+            .all .footer .footer_con .footer_left dl dt span {
+              float: right;
+              font-size: 24px;
+              margin-right: 10px;
+              display: none; }
+          .all .footer .footer_con .footer_left dl dd {
+            margin-bottom: 10px; }
+            .all .footer .footer_con .footer_left dl dd a {
+              color: #999; }
+              .all .footer .footer_con .footer_left dl dd a:hover {
+                color: #444; }
+      .all .footer .footer_con .footer_right {
+        float: left;
+        padding-left: 60px;
+        font-weight: 900;
+        font-size: 16px; }
+        .all .footer .footer_con .footer_right p {
+          margin-bottom: 20px; }
+        .all .footer .footer_con .footer_right dl {
+          position: relative;
+          float: left;
+          margin-right: 50px; }
+          .all .footer .footer_con .footer_right dl dt #wx_green {
+            display: none; }
+          .all .footer .footer_con .footer_right dl dt #wb_red {
+            display: none; }
+          .all .footer .footer_con .footer_right dl dd {
+            display: none;
+            position: absolute;
+            left: -35px;
+            top: 40px; }
+            .all .footer .footer_con .footer_right dl dd img {
+              width: 120px;
+              height: 120px; }
+    .all .footer .company_info {
+      padding: 15px 0;
+      background-color: #f5f5f5; }
+      .all .footer .company_info p {
+        text-align: center; }
+
+@media screen and (max-width: 1920px) {
+  .all .head .header .logo {
+    left: 280px; } }
+
+@media screen and (max-width: 1440px) {
+  .all .head .header .logo {
+    left: 150px; } }
+
+@media screen and (max-width: 767px) {
+  .all .head {
+    height: 50px; }
+  .all .head .header .logo {
+    left: 50%;
+    margin-left: -41.5px;
+    top: 50%;
+    margin-top: -8.5px; }
+  .all .head .header .logo img {
+    width: 84px;
+    height: 17px; }
+  body .all .head .header ul {
+    display: none; }
+  .all .head .header b {
+    top: 15px;
+    display: block; }
+  .all .head .header i {
+    top: 15px;
+    display: block; }
+  .all .login .login_con {
+    left: 50%;
+    margin-left: -175px;
+    padding-right: 5%; }
+  body .all .footer {
+    overflow: hidden;
+    margin-top: 20px; }
+    body .all .footer .footer_con {
+      width: 100%;
+      padding: 0 10px;
+      margin-top: 20px;
+      box-sizing: border-box;
+      overflow: hidden; }
+      body .all .footer .footer_con .footer_left {
+        width: 100%;
+        padding: 0;
+        border: 0; }
+        body .all .footer .footer_con .footer_left dl {
+          width: 100%;
+          overflow: hidden;
+          border-bottom: 1px solid #ccc;
+          margin: 0; }
+          body .all .footer .footer_con .footer_left dl dt {
+            width: 100%;
+            line-height: 50px;
+            margin: 0; }
+            body .all .footer .footer_con .footer_left dl dt span {
+              display: block; }
+          body .all .footer .footer_con .footer_left dl dd {
+            width: 100%;
+            margin-top: 10px;
+            display: none; }
+      body .all .footer .footer_con .footer_right {
+        width: 100%;
+        padding: 0; }
+        body .all .footer .footer_con .footer_right p {
+          line-height: 50px; }
+        body .all .footer .footer_con .footer_right dl {
+          width: 50%;
+          margin: 0;
+          text-align: center;
+          height: 200px; }
+          body .all .footer .footer_con .footer_right dl dt #wx_gray {
+            display: none; }
+          body .all .footer .footer_con .footer_right dl dt #wb_gray {
+            display: none; }
+          body .all .footer .footer_con .footer_right dl dt #wx_green {
+            display: inline-block;
+            width: 30px;
+            height: 30px; }
+          body .all .footer .footer_con .footer_right dl dt #wb_red {
+            width: 30px;
+            height: 30px;
+            display: inline-block; }
+          body .all .footer .footer_con .footer_right dl dd {
+            display: block;
+            left: 50%;
+            top: 60px;
+            transform: translateX(-50%); }
+            body .all .footer .footer_con .footer_right dl dd img {
+              width: 80px;
+              height: 80px; } }
+
+@media screen and (max-width: 400px) {
+  .all .login .login_con {
+    width: 100%; } }
