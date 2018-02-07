@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="all">
+        <!-- ------------------------头部--------------------------- -->
+        <div class="head">
+            <div class="header">
+                <a href="index.html" class="logo">
+                    <img src="../img/logo.png">
+                </a>
+                <ul>
+                    <li>
+                        <a href="javascript:;">产品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">关于公司</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">支持</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="../img/earth.png">
+                        </a>
+                    </li>
+                    <li>
+                        <input type="text" value="搜索">
+                    </li>
+                </ul>
+                <i></i>
+                <b></b>
+            </div>
+        </div>
+        <!-- ----------------------------注册部分----------------------------- -->
+        <div class="register">
+            <div class="wrap">
+                <div class="enter_right">
+                    <p>我已经注册，现在就
+                        <a href="javascript:;">登录</a>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <p id="coding">
+                        <label>图形验证码</label>
+                        <input type="text" placeholder="图形验证码">
+                        <span id="random_num">1354</span>
+                        <a href="javascript:;" id="btn">换一张</a>
+                    </p>
+                    <p id="phone">
+                        <label>手机号</label>
+                        <input type="text" name="username" placeholder="请输入手机号码">
+                    </p>
+                    <p id="phone_coding">
+                        <label>手机验证码</label>
+                        <input type="text" placeholder="手机验证码">
+                        <a href="javascript:;">获取验证码</a>
+                    </p>
+                    <p id="key">
+                        <label>设置密码</label>
+                        <input type="password" name="userpass" placeholder="6-20位字母、符号或数字">
+                    </p>
+                    <p id="key_enter">
+                        <label>确认密码</label>
+                        <input type="password" placeholder="再次输入密码">
+                    </p>
+                    <p class="hint">哈哈哈哈</p>
+                    <p id="agreement">
+                        <label></label>
+                        <span>
+                            <input type="checkbox" checked>我已阅读并同意
+                            <a href="javascript:;">《易果服务协议》</a>
+                        </span>
+                    </p>
+                    <p id="enter_register">
+                        <label></label>
+                        <a href="javascript:;" id="btnReg">立即注册</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/JQuery.js"></script>
+<!-- <script src="../js/footer.js"></script> -->

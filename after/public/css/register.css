@@ -115,7 +115,10 @@ input {
             color: #ef760a;
             text-decoration: underline; }
       .all .register .wrap form {
-        float: left; }
+        float: left;
+        background: red;
+        padding: 20px;
+        width: 200px; }
         .all .register .wrap form p {
           margin-bottom: 29px;
           overflow: hidden; }
@@ -124,7 +127,7 @@ input {
             float: left;
             color: #444;
             margin-right: 25px;
-            width: 240px;
+            width: 100%;
             height: 1px;
             text-align: right; }
           .all .register .wrap form p input {
@@ -134,19 +137,6 @@ input {
             height: 38px;
             vertical-align: middle;
             float: left; }
-          .all .register .wrap form p .hint {
-            float: left;
-            min-width: 100px;
-            margin-left: 10px;
-            font: 14px/38px "Microsoft YaHei"; }
-            .all .register .wrap form p .hint i {
-              background: url(../img/bg_login.png) no-repeat 0 0;
-              display: inline-block;
-              width: 17px;
-              height: 17px;
-              margin-right: 5px; }
-            .all .register .wrap form p .hint em {
-              font-style: normal; }
         .all .register .wrap form #coding span {
           font: 18px/30px "Microsoft YaHei";
           float: left;

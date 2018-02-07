@@ -332,7 +332,3 @@ input {
             body .all .footer .footer_con .footer_right dl dd img {
               width: 80px;
               height: 80px; } }
-
-@media screen and (max-width: 400px) {
-  .all .login .login_con {
-    width: 100%; } }

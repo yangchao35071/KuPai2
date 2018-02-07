@@ -12,20 +12,20 @@ gulp.task('copy-index',function(){
     gulp.src('front/*.html')
         .pipe(gulp.dest('after\\public'));
 })
-// gulp.task('copy-html', function () {
-//     gulp.src('html/*.html')
-//         .pipe(gulp.dest('E:\\phpStudy\\WWW\\KuPai\\html'));
-// })
+gulp.task('copy-html', function () {
+    gulp.src('front/html/*.html')
+        .pipe(gulp.dest('after\\public\\html'));
+})
 // 拷贝图片
-// gulp.task('copy-image',function(){
-//     gulp.src('img/**/*')
-//         .pipe(gfront/ulp.dest('E:\\phpStudy\\WWW\\KuPai\\img'));
-// })
+gulp.task('copy-image',function(){
+    gulp.src('front/img/**/*')
+        .pipe(gulp.dest('after\\public\\img'));
+})
 // 拷贝js文件
-// gulp.task('copy-js',function(){
-//     gulp.src('js/**/*')
-//         .pipe(gulp.dest('E:\\phpStudy\\WWW\\KuPai\\js'));
-// })
+gulp.task('copy-js',function(){
+    gulp.src('front/js/**/*')
+        .pipe(gulp.dest('after\\public\\js'));
+})
 //拷贝sass
 gulp.task('sassfile',function(){
     gulp.src('front/sass/*.scss')
@@ -45,9 +45,9 @@ gulp.task('sassfile',function(){
 
 gulp.task('watchall',function(){
     gulp.watch('front/*.html', ['copy-index']);
-    // gulp.watch('html/*.html', ['copy-html']);
-    // gulp.watch('img/**/*', ['copy-image']);
-    // gulp.watch('js/**/*', ['copy-js']);
+    gulp.watch('front/html/*.html', ['copy-html']);
+    gulp.watch('front/img/**/*', ['copy-image']);
+    gulp.watch('front/js/**/*', ['copy-js']);
     gulp.watch('front/sass/*.scss', ['sassfile']);
     // gulp.watch('php/*.php', ['php-study']);
 })
