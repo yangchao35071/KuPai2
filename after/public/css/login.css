@@ -102,7 +102,6 @@ input {
     position: relative; }
     .all .login .login_con {
       width: 310px;
-      height: 360px;
       border: 1px solid #ccc;
       position: absolute;
       left: 10%;
@@ -126,56 +125,67 @@ input {
         line-height: 20px;
         text-align: center;
         background: red; }
-      .all .login .login_con form div {
-        width: 100%;
-        height: 40px;
-        margin: 15px 0; }
-        .all .login .login_con form div label {
-          float: left;
-          display: inline-block;
-          width: 39px;
-          height: 36px;
-          border: 1px solid #ccc;
-          border-right: 0;
-          background: url(../img/bg_input.png) no-repeat 1px -120px; }
-        .all .login .login_con form div input {
-          float: left;
-          width: 260px;
-          height: 36px;
-          text-indent: 24px;
-          font-size: 14px;
-          border: 1px solid #ccc; }
-      .all .login .login_con form .userpass label {
-        background: url(../img/bg_input.png) no-repeat 1px -180px; }
-      .all .login .login_con form .verify label {
-        background: url(../img/bg_input.png) no-repeat 1px -180px; }
-      .all .login .login_con form .verify input {
-        width: 200px; }
-      .all .login .login_con form .verify span {
-        display: inline-block;
-        width: 50px;
-        line-height: 30px;
-        border: 1px solid #ccc;
-        text-align: center;
-        font-size: 14px;
-        margin: 3px 0 0 8px; }
-      .all .login .login_con form .autoLogin {
-        line-height: 15px; }
-        .all .login .login_con form .autoLogin input {
-          width: 15px;
-          height: 15px;
-          margin-right: 10px; }
-      .all .login .login_con form .sub {
-        width: 100%;
-        height: 50px; }
-        .all .login .login_con form .sub input {
+      .all .login .login_con form {
+        background: #fff; }
+        .all .login .login_con form #hint {
           width: 100%;
-          height: 100%;
-          background: blue;
-          text-align: center;
-          font-size: 18px;
+          line-height: 30px;
+          height: 30px;
+          background: red;
           color: #fff;
-          text-indent: 0; }
+          border-radius: 5px;
+          text-align: center;
+          font-size: 16px; }
+        .all .login .login_con form div {
+          width: 100%;
+          height: 40px;
+          margin: 15px 0; }
+          .all .login .login_con form div label {
+            float: left;
+            display: inline-block;
+            width: 39px;
+            height: 36px;
+            border: 1px solid #ccc;
+            border-right: 0;
+            background: url(../img/bg_input.png) no-repeat 1px -120px; }
+          .all .login .login_con form div input {
+            float: left;
+            width: 260px;
+            height: 36px;
+            text-indent: 24px;
+            font-size: 14px;
+            border: 1px solid #ccc; }
+        .all .login .login_con form .userpass label {
+          background: url(../img/bg_input.png) no-repeat 1px -180px; }
+        .all .login .login_con form .verify label {
+          background: url(../img/bg_input.png) no-repeat 1px -180px; }
+        .all .login .login_con form .verify input {
+          width: 200px; }
+        .all .login .login_con form .verify span {
+          display: inline-block;
+          width: 50px;
+          line-height: 30px;
+          border: 1px solid #ccc;
+          text-align: center;
+          font-size: 14px;
+          margin: 3px 0 0 8px; }
+        .all .login .login_con form .autoLogin {
+          line-height: 15px; }
+          .all .login .login_con form .autoLogin input {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px; }
+        .all .login .login_con form .sub {
+          width: 100%;
+          height: 50px; }
+          .all .login .login_con form .sub input {
+            width: 100%;
+            height: 100%;
+            background: blue;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            text-indent: 0; }
   .all .footer {
     width: 100%; }
     .all .footer .footer_con {

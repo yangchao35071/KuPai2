@@ -125,8 +125,8 @@ input {
             width: 1200px;
             border: 1px solid #c4dfb1;
             margin: 0 auto;
-            background: #fff;
-            padding: 40px 0 50px;
+            background: url(../img/67Bkh4kVlJYg.jpg) no-repeat center;;
+            padding: 40px 20px 50px;
             overflow: hidden;
             .enter_right {
                 position: absolute;
@@ -141,10 +141,9 @@ input {
                 }
             }
             form {
-                float: left;
-                background:red;
                 padding:20px;
-                width:200px;
+                width:400px;
+                background:#fff;
                 p {
                     margin-bottom: 29px;
                     overflow: hidden;
@@ -153,8 +152,8 @@ input {
                         float: left;
                         color: #444;
                         margin-right: 25px;
-                        width: 100%;
-                        height: 1px;
+                        width: 60px;
+                        height: 38px;
                         text-align: right;
                     }
                     input {
@@ -214,12 +213,6 @@ input {
                         background: url(../img/bg_input.png) no-repeat 275px -70px;
                     }
                 }
-                #key {
-                    input {
-                        width: 290px;
-                        background: url(../img/bg_input.png) no-repeat 275px -70px;
-                    }
-                }
                 #key_enter {
                     input {
                         width: 290px;
@@ -232,7 +225,19 @@ input {
                         background: url(../img/bg_input.png) no-repeat 275px -70px;
                     }
                 }
+                #hint{
+                    width:100%;
+                    line-height:30px;
+                    background:green;
+                    text-align: center;
+                    margin:0;
+                    border-radius:5px;
+                    font-size:16px;
+                    color:#fff;
+                    display:none;
+                }
                 #agreement {
+                    padding-left:70px;
                     span {
                         float: left;
                         line-height: 38px;
@@ -246,13 +251,17 @@ input {
                     }
                 }
                 #enter_register {
-                    a {
+                    width:306px;
+                    margin:0 auto;
+                    #sub {
                         float: left;
                         width: 306px;
                         text-align: center;
-                        background: #008842;
+                        background: blue;
                         color: #fff;
                         font: 18px/50px "Microsoft YaHei";
+                        padding:0;
+                        height:50px;
                     }
                 }
             }
@@ -281,6 +290,17 @@ input {
     }
 }
 
+@media screen and (max-width:1024px) {
+    // ----------------注册部分-------------------
+    .all .register .wrap {
+        width:100%;
+        form{
+            clear:both;
+            margin:0 auto;
+        }
+    }
+}
+
 @media screen and (max-width: 767px) {
     .all .head {
         height: 50px;
@@ -305,5 +325,16 @@ input {
     .all .head .header i {
         top: 15px;
         display: block;
+    }
+}
+
+@media screen and (max-width: 500px){
+    // ----------------注册部分-------------------
+    .all .register .wrap {
+        padding:0 20px 0 0;
+        form{
+            clear:both;
+            width:100%;
+        }
     }
 }

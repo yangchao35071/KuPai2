@@ -43,10 +43,10 @@
             <div class="login_con">
                 <div class="login_tit">欢迎登录<p class="register">还没有账号？<a href="javascript:;">立即注册</a></p></div>
                 <div class="hint"></div>
-                <form method="post" action="../login" id="logForm">
-                    <div id="hint">哈哈哈</div>
-                    <div class="username"><label></label><input type="text" name="username" placeholder="请输入您的手机号" id="user"></div>
-                    <div class="userpass"><label></label><input type="password" name="userpass" placeholder="请输入您的密码" id="pass"></div>
+                <form method="post" action="login">
+                    <div id="hint"><%=errmsg%></div>
+                    <div class="username"><label></label><input type="text" name="username" placeholder="请输入您的手机号"></div>
+                    <div class="userpass"><label></label><input type="password" name="userpass" placeholder="请输入您的密码"></div>
                     <div class="verify"><label></label><input type="text" placeholder="验证码"><span>1234</span></div>
                     <div class="autoLogin"><input type="checkbox">自动登录</div>
                     <div class="sub"><input type="submit" value="登  录"></div>
@@ -123,10 +123,10 @@
 <script src="../js/JQuery.js"></script>
 <script src="../js/footer.js"></script>
 <script>
-    $(function(){
-        $('#logForm').submit(function(){
+    $(function () {
+        $('#logForm').submit(function () {
             if ($('#user').val() == '' || $('#pass').val() == '') {
-                hintNull('用户名和密码不能为空！') ;
+                hintNull('用户名和密码不能为空！');
                 return false;
             }
         })

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="all">
+        <!-- ------------------------头部--------------------------- -->
+        <div class="head">
+            <div class="header">
+                <a href="index.html" class="logo">
+                    <img src="../img/logo.png">
+                </a>
+                <ul>
+                    <li>
+                        <a href="javascript:;">产品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">关于公司</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">支持</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="../img/earth.png">
+                        </a>
+                    </li>
+                    <li>
+                        <input type="text" value="搜索">
+                    </li>
+                </ul>
+                <i></i>
+                <b></b>
+            </div>
+        </div>
+        <!-- ----------------------------注册部分----------------------------- -->
+        <div class="register">
+            <div class="wrap">
+                <!-- <div class="enter_right">
+                    <p>我已经注册，现在就
+                        <a href="javascript:;">登录</a>
+                    </p>
+                </div> -->
+                <form method="post" action="register" id="regForm">
+                    <p id="coding">
+                        <label>图形验证码</label>
+                        <input type="text" placeholder="图形验证码" id="cod">
+                        <span id="random_num">1354</span>
+                        <a href="javascript:;" id="btn">换一张</a>
+                    </p>
+                    <p id="phone">
+                        <label>手机号</label>
+                        <input type="text" name="username" placeholder="请输入手机号码" id="pho">
+                    </p>
+                    <p id="phone_coding">
+                        <label>手机验证码</label>
+                        <input type="text" placeholder="手机验证码">
+                        <a href="javascript:;">获取验证码</a>
+                    </p>
+                    <p id="key">
+                        <label>设置密码</label>
+                        <input type="password" name="userpass" placeholder="6-20位字母、符号或数字" id="keys">
+                    </p>
+                    <p id="key_enter">
+                        <label>确认密码</label>
+                        <input type="password" placeholder="再次输入密码" id="keyss">
+                    </p>
+                    <p id="hint" ><%=errmsg%></p>
+                    <p id="agreement">
+                        <span>
+                            <input type="checkbox" checked>我已阅读并同意
+                            <a href="javascript:;">《酷派服务协议》</a>
+                        </span>
+                    </p>
+                    <p id="enter_register">
+                        <input type="submit" value="立即注册" id="sub">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/JQuery.js"></script>
+<script src="../js/random.js"></script>
+<script src="../js/footer.js"></script>
+<script>
+    $(function(){
+        clicks($('#btn'), $('#random_num'));
+        blurs($('#coding'),'验证码');
+        blurs($('#phone'),'手机号码');
+        blurs($('#key'),'密码');
+        blurs($('#key_enter'),'二次密码');
+        $('#regForm').submit(function(){
+            if($('#cod').val() == '' &&  $('#pho').val() == '' && $('#keys').val() == '' && $('#keyss').val() == ''){
+                hintNull('输入框不能为空');
+                return false;
+            }
+        })
+    })
+    function blurs(boxDom,way){
+        boxDom.find('input').blur(function(){
+            let labelVal = boxDom.find('span').html();
+            let inputVal = boxDom.find('input').val();
+            switch(way){
+                case '验证码':if(inputVal == ''){
+                                $(this).css({ 'color': 'blur' });
+                                hintNull(''+ way +'不能为空');
+                            }else if(inputVal != labelVal){
+                                $(this).css({'color':'red'});
+                                hintErr('您输入的'+ way +'有误请重新输入');
+                            } else {
+                                $(this).css({'color':'green'});
+                                hintYes('您输入的'+ way +'正确');
+                            }
+                            break;
+                case '手机号码': var phoneR = /^1[34578]\d{9}$/;
+                                if(inputVal == ''){
+                                    $(this).css({ 'color': 'blur' });
+                                    hintNull(''+ way +'不能为空');
+                                }else if(phoneR.test(inputVal)){
+                                    $(this).css({'color':'green'});
+                                    hintYes('您输入的'+ way +'格式正确');
+                                    $.ajax({
+                                        url: 'usercheck',
+                                        data: { 'username': inputVal },
+                                        success: function (t) {
+                                            if (t == '1') {
+                                                hintErr('您输入的' + way + '已注册');
+                                            } else {
+                                                hintYes('您输入的' + way + '可用');
+                                            }
+                                        }
+                                    })
+                                } else {
+                                    $(this).css({'color':'red'});
+                                    hintErr('您输入的'+ way +'格式有误请重新输入');
+                                }
+                                break;
+                case '密码': var keyR = /^[a-zA-Z0-9_]{6,20}$/;
+                                if(inputVal == ''){
+                                    $(this).css({ 'color': 'blur' });
+                                    hintNull(''+ way +'不能为空');
+                                }else if(keyR.test(inputVal)){
+                                    $(this).css({'color':'green'});
+                                    hintYes('您输入的'+ way +'格式正确');
+                                } else {
+                                    $(this).css({'color':'red'});
+                                    hintErr('您输入的'+ way +'格式不正确请重新输入');
+                                }
+                                break;
+                case '二次密码': var keyR = /^[a-zA-Z0-9_]{6,20}$/;
+                                if(inputVal == ''){
+                                    $(this).css({ 'color': 'blur' });
+                                    hintNull(''+ way +'不能为空');
+                                } else if(inputVal != boxDom.siblings("#key").find('input').val()){
+                                    $(this).css({ 'color': 'red' });
+                                    hintErr('您输入的' + way + '与上次密码不一致');
+                                } else if (keyR.test(inputVal)) {
+                                    $(this).css({ 'color': 'green' });
+                                    hintYes('您输入的' + way + '格式正确');
+                                } else {
+                                    $(this).css({'color':'red'});
+                                    hintErr('您输入的'+ way +'格式不正确请重新输入');
+                                }
+                                break;
+            }
+        })
+    }
+    function hintNull(text){
+        $('#hint').html(text).css({ 'background': 'blue' ,'display':'block'});
+    }
+    function hintErr(text){
+        $('#hint').html(text).css({ 'background': 'red' ,'display':'block'});
+    }
+    function hintYes(text){
+        $('#hint').html(text).css({ 'background': 'green' ,'display':'block'});
+    }
+
+</script>
