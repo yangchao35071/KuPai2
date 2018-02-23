@@ -1,22 +1,3 @@
-$(function () {
-    new Slideshow({
-        'boxDom': $('#slideshow'),
-
-        'imgs': ['banner_M7.jpg', 'banner_C6_P.jpg', 's1R7d6Kh85S9.jpg', '7WetOMDL8czC.jpg', '67Bkh4kVlJYg.jpg'],
-
-        'btnW': '50px',
-        'btnH': '8px'
-    })
-    new Slideshow({
-        'boxDom': $('#slideshow2'),
-
-        'imgs': ['banner_C6_P.jpg','banner_M7.jpg', '7WetOMDL8czC.jpg', '67Bkh4kVlJYg.jpg'],
-
-        'btnW': '50px',
-        'btnH': '8px'
-    })
-})
-
 let Slideshow = function (obj) {
     this.boxDom = obj.boxDom;
 
@@ -54,7 +35,7 @@ Slideshow.prototype.initUI = function () {
         });
         this.$aDom = $('<a></a>');
         this.$aDom.attr({ 'href': 'javascript:;' });
-        this.$aDom.css({ 'width': '100%', 'height': '100%', 'background': 'url(img/' + this.imgs[i] + ') no-repeat center', 'display': 'block', 'background-size': 'cover' })
+        this.$aDom.css({ 'width': '100%', 'height': '100%', 'background': 'url( '+this.imgs[i]+') no-repeat center', 'display': 'block', 'background-size': 'cover' })
         this.$liDom.append(this.$aDom);
         this.$ulDom.append(this.$liDom);
     }

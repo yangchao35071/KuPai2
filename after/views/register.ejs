@@ -126,6 +126,7 @@
                                 }else if(phoneR.test(inputVal)){
                                     $(this).css({'color':'green'});
                                     hintYes('您输入的'+ way +'格式正确');
+                                    console.log('asdsda')
                                     $.ajax({
                                         url: 'usercheck',
                                         data: { 'username': inputVal },

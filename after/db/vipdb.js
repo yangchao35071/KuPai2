@@ -42,7 +42,7 @@ module.exports = {
     "find":function (condation, func) {
         VipModel.find(condation,(err,data)=>{
             if(err){
-                console.log(err);
+                console.log(err, '哈哈哈');
                 func([]);
             }else{
                 func(data);
