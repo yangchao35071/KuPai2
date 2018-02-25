@@ -12,6 +12,7 @@ router.post('/', function(req, res, next) {
     let goodsrule  = req.body.goodsrule;
     let goodspic1   = req.body.goodspic1;
     let goodspic2   = req.body.goodspic2;
+    let goodspic3   = req.body.goodspic3;
 
     //2、链接数据库，添加数据
     goodslistsdb.add({
@@ -21,7 +22,8 @@ router.post('/', function(req, res, next) {
         "goodscount":goodscount,
         "goodsrule": goodsrule ,
         "goodspic1":goodspic1,
-        "goodspic2":goodspic2
+        "goodspic2":goodspic2,
+        "goodspic3":goodspic3
     },function (isSuccess) {
         if(isSuccess){
             //3、给前端响应

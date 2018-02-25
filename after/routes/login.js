@@ -2,6 +2,12 @@ var express = require('express');
 var router = express.Router();
 var vipsdb = require("../db/vipdb");
 
+
+
+router.get("/", function (req, res) {
+    res.render("login", { "errmsg": "" });
+});
+
 router.post('/', function (req, res, next) {
     //1、接收数据（用户名，密码，年龄）
     let username = req.body.username;
@@ -17,9 +23,9 @@ router.post('/', function (req, res, next) {
             res.render("login", { "errmsg": "账户名或密码错误，请重新输入！" });
         } else {
             //用session保存了一个变量username，这个username保存到服务器端的内存里
-            // req.session.username = username;
+            req.session.username = username;
             //记录cookie，这是服务器端执行的代码。这个username保存前端硬盘上。
-            // res.cookie("username", username);
+            res.cookie("username", username);
             //res.redirect("index.html");
             res.redirect("index.html");
         }

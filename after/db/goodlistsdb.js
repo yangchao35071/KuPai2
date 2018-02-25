@@ -9,7 +9,8 @@ let goodslistsSchema = new mongoose.Schema({
     "goodscount":Number,
     "goodsrule":String,
     "goodspic1":String,
-    "goodspic2":String
+    "goodspic2":String,
+    "goodspic3":String
 });
 
 //创建模型

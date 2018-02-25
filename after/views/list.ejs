@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/list.css">
-    <title>列表页</title>
+    <title><%= title %></title>
 </head>
 
 <body>
@@ -49,50 +49,21 @@
                 <p class="list_tit">产品
                     <span>/</span>智能硬件</p>
                 <div class="list_content">
-                    <div class="list_item_c">
-                        <a href="javascript:;">
-                            <div class="list_img_ico">
-                                <img src="../img/ZwdH2V32537z.png">
-                                <p>要你好看</p>
-                            </div>
-                            <div class="list_img">
-                                <img src="../img/i05T84Qx28Sw.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list_item_c">
-                        <a href="javascript:;">
-                            <div class="list_img_ico">
-                                <img src="../img/XMW1U31ZP0F9.png">
-                                <p>前置双摄像，群拍更美</p>
-                            </div>
-                            <div class="list_img">
-                                <img src="../img/6z532ufZ5gq1.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list_item_c">
-                        <a href="javascript:;">
-                            <div class="list_img_ico">
-                                <img src="../img/99N4DnfU5RO5.png">
-                                <p>6GB 怪兽级游戏体验</p>
-                            </div>
-                            <div class="list_img">
-                                <img src="../img/l8z063b689Ve.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list_item_c">
-                        <a href="javascript:;">
-                            <div class="list_img_ico">
-                                <img src="../img/G1YdLMBY5dYk.png">
-                                <p>音质无损 游戏无阻</p>
-                            </div>
-                            <div class="list_img">
-                                <img src="../img/BFSKFDy0645t.jpg">
-                            </div>
-                        </a>
-                    </div>
+                    <%for(let i=0;i<goodslist.length-1;i++){
+                        %>
+                        <div class="list_item_c">
+                            <a href="details?goodsid=<%=goodslist[i].goodsid%>" target="_blank">
+                                <div class="list_img_ico">
+                                    <img src="img/<%=goodslist[i].goodspic2%>">
+                                    <p><%=goodslist[i].goodsrule%></p>
+                                </div>
+                                <div class="list_img">
+                                    <img src="img/<%=goodslist[i].goodspic1%>">
+                                </div>
+                            </a>
+                        </div>
+                       <%
+                    }%>
                 </div>
             </div>
         </div>
@@ -102,13 +73,9 @@
                     <span>/</span>智能产品</p>
                 <div class="list_content">
                     <div class="list_item_c">
-                        <a href="javascript:;">
-                            <!-- <div class="list_img_ico">
-                                <img src="../img/ZwdH2V32537z.png">
-                                <p>要你好看</p>
-                            </div> -->
+                        <a href="details?goodsid=<%=goodslist[4].goodsid%>">
                             <div class="list_img">
-                                <img src="../img/KT70Q91I91xs.jpg">
+                                <img src="../img/<%=goodslist[4].goodspic1%>">
                             </div>
                         </a>
                     </div>
